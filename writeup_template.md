@@ -1,9 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
@@ -30,20 +26,20 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps
 
-    1. First I converted the image to Grayscale
+1. First I converted the image to Grayscale
 
 ![alt text][image1]
 
-    2. Then I applied the Gaussian Smoothing with Kernel size of 5
+2. Then I applied the Gaussian Smoothing with Kernel size of 5
 ![alt text][image2]
 
-    3. Then I defined the Parameters (low threshold and high threshold) and applied Canny
+3. Then I defined the Parameters (low threshold and high threshold) and applied Canny
 ![alt text][image3]
 
-    4. Then I defined a four sided polygon to mask and then applied region of interest to get only required region of edges
+4. Then I defined a four sided polygon to mask and then applied region of interest to get only required region of edges
 ![alt text][image4]
 
-    5. Then I applied Hough Transform with transfer parameters. I also modified the draw_lines method to get right and left lane line. 
+5. Then I applied Hough Transform with transfer parameters. I also modified the draw_lines method to get right and left lane line. 
 
 For each set of left and right lines, I identified the slope of the line and categorised negative and postive slope. Then I created a function fit_line() to calculate the lane. 
 
